@@ -1,0 +1,21 @@
+package com.danielcs.mercurychat.services;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class UserService {
+
+    private Set<String> users = new HashSet<>();
+
+    public Set<String> getUsers() {
+        return users;
+    }
+
+    public void loginUser(String userId) {
+        this.users.add(userId);
+    }
+
+    public void logoutUser(String userId) {
+        this.users.remove(userId);
+    }
+}
