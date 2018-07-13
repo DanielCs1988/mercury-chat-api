@@ -1,0 +1,1 @@
+web: java -jar target/mercury-chat-1.0.jar
