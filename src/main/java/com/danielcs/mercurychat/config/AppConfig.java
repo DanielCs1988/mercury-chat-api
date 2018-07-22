@@ -13,11 +13,7 @@ public class AppConfig {
 
     @Dependency
     public SQLUtils getDataManager() {
-        return new SQLUtils(
-                System.getenv("DB_PATH"),
-                System.getenv("DB_USER"),
-                System.getenv("DB_PASSWORD")
-        );
+        return new SQLUtils(System.getenv("JDBC_DATABASE_URL"));
     }
 
     @Dependency
