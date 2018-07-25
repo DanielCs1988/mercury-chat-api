@@ -28,7 +28,9 @@ public class MessageRepository implements MessageDAO {
     @Override
     public List<Message> getMessagesBetween(String from, String to) {
         return db.fetchAll(
-                "SELECT * FROM messages WHERE (from_user = ? AND to_user = ?) OR (from_user = ? AND to_user = ?);",
+                "SELECT * FROM messages " +
+                            "WHERE (from_user = ? AND to_user = ?) OR (from_user = ? AND to_user = ?) " +
+                              "ORDER BY createdAt ASC;",
                 assembler, from, to, to, from
         );
     }
@@ -37,7 +39,8 @@ public class MessageRepository implements MessageDAO {
     public Message createMessage(Message message) {
         final long currentTime = new Timestamp(System.currentTimeMillis()).getTime();
         return db.fetchOne(
-                "INSERT INTO messages (content, from_user, to_user, createdAt) VALUES (?, ?, ?, ?) RETURNING *;",
+                "INSERT INTO messages (content, from_user, to_user, createdAt) " +
+                            "VALUES (?, ?, ?, ?) RETURNING *;",
                 assembler, message.getContent(), message.getFrom(), message.getTo(), currentTime
         );
     }
