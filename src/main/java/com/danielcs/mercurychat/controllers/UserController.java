@@ -4,6 +4,7 @@ import com.danielcs.mercurychat.services.UserService;
 import com.danielcs.webserver.socket.SocketContext;
 import com.danielcs.webserver.socket.annotations.OnMessage;
 import com.danielcs.webserver.socket.annotations.SocketController;
+import com.danielcs.webserver.socket.annotations.Weave;
 
 @SocketController
 public class UserController {
@@ -14,12 +15,14 @@ public class UserController {
         this.userService = userService;
     }
 
+    @Weave(aspect = "eyeOfMordor")
     @OnMessage(route = "connect")
     public void userJoined(SocketContext ctx) {
         userService.loginUser(ctx.getProperty("userId").toString());
         ctx.emit("users", userService.getUsers());
     }
 
+    @Weave(aspect = "eyeOfMordor")
     @OnMessage(route = "disconnect")
     public void userLeft(SocketContext ctx) {
         userService.logoutUser(ctx.getProperty("userId").toString());
