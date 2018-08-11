@@ -43,6 +43,7 @@ public class Authenticator implements AuthGuard {
                 return false;
             }
             ctx.setProperty("userId", claims.getSubject());
+            ctx.setProperty("token", token);
         } catch (InvalidJwtException | MalformedClaimException e) {
             System.out.println("Invalid token!\n" + e);
             return false;

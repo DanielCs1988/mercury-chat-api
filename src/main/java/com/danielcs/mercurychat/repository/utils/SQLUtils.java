@@ -9,9 +9,9 @@ public class SQLUtils {
 
     private Connection connection;
 
-    public SQLUtils(String path, String username, String password) {
+    public SQLUtils(String dbUrl, String user, String password) {
         try {
-            connection = DriverManager.getConnection(path, username, password);
+            connection = DriverManager.getConnection(dbUrl, user, password);
         } catch (SQLException e) {
             System.out.println("Could not establish database connection.");
             e.printStackTrace();
