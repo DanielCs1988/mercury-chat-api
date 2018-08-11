@@ -11,7 +11,7 @@ import java.util.List;
 @SocketController
 public class MessageController {
 
-    private MessageDAO messageRepository;
+    private final MessageDAO messageRepository;
 
     public MessageController(MessageDAO messageRepository) {
         this.messageRepository = messageRepository;
