@@ -3,11 +3,13 @@ package com.danielcs.mercurychat.repository;
 import com.danielcs.mercurychat.models.Message;
 import com.danielcs.mercurychat.repository.utils.ModelAssembler;
 import com.danielcs.mercurychat.repository.utils.SQLUtils;
-import com.danielcs.webserver.socket.annotations.InjectionPoint;
+import com.danielcs.webserver.core.annotations.Dependency;
+import com.danielcs.webserver.core.annotations.InjectionPoint;
 
 import java.sql.Timestamp;
 import java.util.List;
 
+@Dependency
 public class MessageRepository implements MessageDAO {
 
     private SQLUtils db;

@@ -1,9 +1,9 @@
 package com.danielcs.mercurychat.services;
 
 import com.danielcs.mercurychat.models.Message;
+import com.danielcs.webserver.core.annotations.Aspect;
+import com.danielcs.webserver.core.annotations.AspectType;
 import com.danielcs.webserver.socket.SocketContext;
-import com.danielcs.webserver.socket.annotations.Aspect;
-import com.danielcs.webserver.socket.annotations.AspectType;
 
 import java.util.*;
 

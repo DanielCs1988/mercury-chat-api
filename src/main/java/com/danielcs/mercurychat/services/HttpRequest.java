@@ -1,6 +1,6 @@
 package com.danielcs.mercurychat.services;
 
-import com.danielcs.webserver.socket.annotations.HttpRequestAssembler;
+import com.danielcs.webserver.core.annotations.HttpRequestAssembler;
 
 import java.util.Set;
 

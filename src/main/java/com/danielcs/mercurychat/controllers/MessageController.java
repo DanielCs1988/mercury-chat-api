@@ -2,6 +2,7 @@ package com.danielcs.mercurychat.controllers;
 
 import com.danielcs.mercurychat.models.Message;
 import com.danielcs.mercurychat.repository.MessageDAO;
+import com.danielcs.webserver.core.annotations.Weave;
 import com.danielcs.webserver.socket.SocketContext;
 import com.danielcs.webserver.socket.annotations.*;
 

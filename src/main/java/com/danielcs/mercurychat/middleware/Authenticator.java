@@ -16,7 +16,7 @@ import java.util.Date;
 
 public class Authenticator implements AuthGuard {
 
-    private HttpsJwksVerificationKeyResolver resolver;
+    private final HttpsJwksVerificationKeyResolver resolver;
 
     public Authenticator(HttpsJwks httpsJwks) {
         this.resolver = new HttpsJwksVerificationKeyResolver(httpsJwks);

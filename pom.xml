@@ -42,8 +42,8 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <minimizeJar>true</minimizeJar>
-                            <createDependencyReducedPom>true</createDependencyReducedPom>
+                            <minimizeJar>false</minimizeJar>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <dependencyReducedPomLocation>
                                 ${java.io.tmpdir}/dependency-reduced-pom.xml
                             </dependencyReducedPomLocation>
@@ -78,7 +78,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.2</version>
+            <version>42.2.4</version>
         </dependency>
         <dependency>
             <groupId>org.bitbucket.b_c</groupId>

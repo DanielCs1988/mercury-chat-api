@@ -1,8 +1,11 @@
 package com.danielcs.mercurychat.services;
 
+import com.danielcs.webserver.core.annotations.Dependency;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@Dependency
 public class UserService {
 
     private Set<String> users = new HashSet<>();

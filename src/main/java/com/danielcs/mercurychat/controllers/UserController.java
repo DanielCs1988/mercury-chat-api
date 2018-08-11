@@ -1,10 +1,10 @@
 package com.danielcs.mercurychat.controllers;
 
 import com.danielcs.mercurychat.services.UserService;
+import com.danielcs.webserver.core.annotations.Weave;
 import com.danielcs.webserver.socket.SocketContext;
 import com.danielcs.webserver.socket.annotations.OnMessage;
 import com.danielcs.webserver.socket.annotations.SocketController;
-import com.danielcs.webserver.socket.annotations.Weave;
 
 @SocketController
 public class UserController {
